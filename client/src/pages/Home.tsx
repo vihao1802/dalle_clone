@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Card, FormField, Loader } from "../components";
 
-const RenderCards = ({ data, title }) => {
+const RenderCards = ({ data, title }: any) => {
   if (data?.length > 0)
-    return data.map((post) => <Card key={post._id} {...post} />);
+    return data.map((post: any) => <Card key={post._id} {...post} />);
 
   return (
     <h2
@@ -17,22 +17,30 @@ const RenderCards = ({ data, title }) => {
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
-  const [allPosts, setAllPosts] = useState(null);
+  const [allPosts, setAllPosts] = useState([
+    {
+      name: "",
+      prompt: "",
+    },
+  ]);
 
   const [searchText, setSearchText] = useState("");
-  const [searchResults,setSearchResults] = useState(null);
-  const [searchTimeout,setSearchTimeout] = useState(null);
+  const [searchResults, setSearchResults] = useState({});
+  const [searchTimeout, setSearchTimeout] = useState(0);
 
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const response = await fetch("http://localhost:8080/api/v1/post", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const response = await fetch(
+          "https://dall-e-2klu.onrender.com/api/v1/post",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
 
         if (response.ok) {
           const result = await response.json();
@@ -47,24 +55,22 @@ const Home = () => {
     fetchPosts();
   }, []);
 
-
-  const handleSearchChange = (e) => {
+  const handleSearchChange = (e: any) => {
     clearTimeout(searchTimeout);
 
     setSearchText(e.target.value);
 
     setSearchTimeout(
       setTimeout(() => {
-        const searchResults = allPosts.filter((item) => item.name.
-        toLowerCase().includes(searchText.toLowerCase()) || item.prompt.
-        toLowerCase().includes(searchText.toLowerCase()))
+        const searchResults = allPosts.filter(
+          (item) =>
+            item.name.toLowerCase().includes(searchText.toLowerCase()) ||
+            item.prompt.toLowerCase().includes(searchText.toLowerCase())
+        );
         setSearchResults(searchResults);
-  
-      },500)
-    )
-    
-
-  }
+      }, 500)
+    );
+  };
 
   return (
     <section className="max-w-7xl mx-auto">
@@ -79,13 +85,14 @@ const Home = () => {
       </div>
 
       <div className="mt-16">
-        <FormField 
-        labelName="Search posts"
-        type="text"
-        name="text"
-        placeholder="Search posts"
-        value={searchText} 
-        handleChange={handleSearchChange}/>
+        <FormField
+          labelName="Search posts"
+          type="text"
+          name="text"
+          placeholder="Search posts"
+          value={searchText}
+          handleChange={handleSearchChange}
+        />
       </div>
 
       <div className="mt-10">
@@ -107,7 +114,10 @@ const Home = () => {
             xs:grid-cols-2 grid-cols-1 gap-3"
             >
               {searchText ? (
-                <RenderCards data={searchResults} title="No search results found" />
+                <RenderCards
+                  data={searchResults}
+                  title="No search results found"
+                />
               ) : (
                 <RenderCards data={allPosts} title="No posts found" />
               )}
