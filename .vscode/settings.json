@@ -3,6 +3,7 @@
         "cardhover",
         "cloudinary",
         "DALL",
-        "dalle"
+        "dalle",
+        "darkmode"
     ]
 }

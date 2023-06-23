@@ -82,8 +82,10 @@ const CreatePost = () => {
   return (
     <section className="max-w-7xl mx-auto">
       <div>
-        <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
-        <p className="mt-2 text-[#666e75] text-[14px] max-w[500px]">
+        <h1 className="font-extrabold text-[#222328] text-[32px] dark:text-gray-50">
+          Create
+        </h1>
+        <p className="mt-2 text-[#666e75] text-[14px] max-w[500px] dark:text-[#a9abae]">
           Create imaginative and visually stunning images through DALL-E AI and
           share them with the community
         </p>
@@ -154,7 +156,7 @@ const CreatePost = () => {
         </div>
 
         <div className="mt-10">
-          <p className="mt-2 text-[#666e75] text-[14px]">
+          <p className="mt-2 text-[#666e75] text-[14px] dark:text-[#a9abae]">
             Once you have created the image you want,you can share it with
             others in the community
           </p>

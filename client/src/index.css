@@ -7,6 +7,15 @@
 }
 
 @media screen and (min-width: 480px) {
+  /* 7n+1 : 
+    7 là khoảng cách giữa 2 phần tử liền kề => 7 - 1 = 6 là khoảng cách của 2 pt
+    1 là vị trí bắt đầu
+    n kiểm soát khoảng cách khi có hoặc không có khoảng cách,
+    trường hợp không có khoảng cách thì giữa các phần từ sẽ dính nhau
+    => ta có những trường hợp khác
+    vd: -n + 1 , -n + 7 ,...
+    -n sẽ khiến cho vị trí trí bắt đầu chuyển thành số lượng child xuất hiện
+  */
   .card:nth-child(7n + 1) {
     grid-column: auto/span 2;
     grid-row: auto/span 2;
