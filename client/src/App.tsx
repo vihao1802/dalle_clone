@@ -35,7 +35,7 @@ const App = () => {
             </label>
             <Link
               to="/create-post"
-              className="font-inter font-medium text-white bg-[#1e25f6] dark:bg-[#6469ff] dark:text-white px-6 py-2 rounded-md"
+              className="font-inter font-medium text-white bg-[#1e25f6] dark:bg-[#6469ff] px-6 py-2 rounded-md"
             >
               Create
             </Link>

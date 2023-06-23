@@ -18,12 +18,7 @@ const RenderCards = ({ data, title }: any) => {
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
-  const [allPosts, setAllPosts] = useState([
-    {
-      name: "",
-      prompt: "",
-    },
-  ]);
+  const [allPosts, setAllPosts] = useState<any | null>(null);
 
   const [searchText, setSearchText] = useState("");
   const [searchResults, setSearchResults] = useState({});
@@ -54,7 +49,6 @@ const Home = () => {
       }
     };
     fetchPosts();
-    checkDarkmode();
   }, []);
 
   const handleSearchChange = (e: any) => {
@@ -65,7 +59,7 @@ const Home = () => {
     setSearchTimeout(
       setTimeout(() => {
         const searchResults = allPosts.filter(
-          (item) =>
+          (item: any) =>
             item.name.toLowerCase().includes(searchText.toLowerCase()) ||
             item.prompt.toLowerCase().includes(searchText.toLowerCase())
         );

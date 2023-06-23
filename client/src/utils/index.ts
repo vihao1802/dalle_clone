@@ -27,7 +27,6 @@ export function checkDarkmode() {
           toggleSwitchInput.checked = true;
     }
   }
-  console.log(currentTheme);
 }
 
 export function useColorScheme(e: any) {
