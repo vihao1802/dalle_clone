@@ -14,7 +14,7 @@ export async function downloadImage(_id:any, photo:any) {
     FileSaver.saveAs(photo,`download-${_id}.jpg`)
 }
 
-export function checkDarkmode() {
+export async function checkDarkmode() {
   const toggleSwitch = document.querySelector('.toggle-switch') as HTMLInputElement;
   const currentTheme = localStorage.getItem("theme");
   
