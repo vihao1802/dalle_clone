@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Card, FormField, Loader } from "../components";
-import { checkDarkmode } from "../utils";
+// import { checkDarkmode } from "../utils";
 
 const RenderCards = ({ data, title }: any) => {
   if (data?.length > 0)
@@ -29,7 +29,7 @@ const Home = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          "https://dall-e-2klu.onrender.com/api/v1/post",
+          "https://dalle-clone-wofd.onrender.com/api/v1/post",
           {
             method: "GET",
             headers: {
@@ -43,7 +43,7 @@ const Home = () => {
           setAllPosts(result.data.reverse());
         }
       } catch (error) {
-        alert(error);
+        console.log(error);
       } finally {
         setLoading(false);
       }
@@ -93,8 +93,11 @@ const Home = () => {
 
       <div className="mt-10">
         {loading ? (
-          <div className="flex justify-center items-center">
+          <div className="flex flex-col justify-center items-center">
             <Loader />
+            <h1 className="mt-2 ">
+              It may take a little longer ( powered by Render's Free Plan )
+            </h1>
           </div>
         ) : (
           <>

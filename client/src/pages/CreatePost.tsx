@@ -20,7 +20,7 @@ const CreatePost = () => {
       try {
         setGeneratingImg(true);
         const response = await fetch(
-          "https://dall-e-2klu.onrender.com/api/v1/dalle",
+          "https://dalle-clone-wofd.onrender.com/api/v1/dalle",
           {
             method: "POST",
             headers: {
@@ -33,7 +33,10 @@ const CreatePost = () => {
         const data = await response.json();
         setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}` });
       } catch (error) {
-        alert(error);
+        alert(
+          "OpenAI's API has exceeded its free tier limit. Sorry for the inconvenience."
+        );
+        console.log(error);
       } finally {
         setGeneratingImg(false);
       }
