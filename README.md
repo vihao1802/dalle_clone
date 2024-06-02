@@ -23,8 +23,7 @@
 
 ![image](https://github.com/vihao1802/dalle_clone/assets/108573121/ca894ff0-1611-4f3b-8ef9-0d35434a6bfa)
 
-
-<!-- 
+<!--
 <img src="/docs/screenshot.png" width="100%">
 
 ## Render Deployment
@@ -33,7 +32,6 @@
 
 ### Backend: <a href="https://website-classin.onrender.com" target="_blank">https://website-classin.onrender.com</a>
 -->
-
 
 <!-- GETTING STARTED -->
 
@@ -51,6 +49,7 @@
 ```sh
 git clone https://github.com/vihao1802/dalle_clone
 ```
+
 2. From `root` directory, move to `frontend`
 
 ```
@@ -78,22 +77,18 @@ npm i
 8. Create file `.env.local` in folder `frontend` with format:
 
 ```env
-REACT_APP_BASE_URL=http://localhost:8000/api
-REACT_APP_WEBSOCKET_URL=ws://localhost:8000/api/ws
+
 ```
 
 9. Create file `.env` in folder `backend` with format:
 
 ```env
-URL_DATABASE="sqlite:///./classin_database.db"
-PORT=8000
-DOMAIN_URL=http://localhost:8000
-DOMAIN_CLIENT=http:localhost:3000
-JWT_ALGORITHM=HS256
-JWT_SECRET=#use_generate_UUID_tool_for_this
-EMAIL=#email-for-upload-file-feature
-PASSWORD_EMAIL=#password-email-for-upload-file-feature
-SERVICE_ACCOUNT_FILE=#use-absolute-path-to-backend/config/xenon-timer.json_file
+OPENAI_API_KEY=
+MONGODB_URL=
+
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
 ```
 
 ## 🚀 Usage
@@ -129,6 +124,7 @@ uvicorn main:app --reload
 ```
 
 ## ✨ Code Contributors
+
 <a href="https://github.com/vihao1802/dalle_clone/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=vihao1802/dalle_clone" />
 </a>
