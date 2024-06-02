@@ -1,11 +1,11 @@
 <h1 align="center">Welcome to DALL-E</h1>
 <p align="center">
-<!--   <a href="https://github.com/vihao1802/Website-ClassIn/blob/main/LICENSE">
+  <a href="https://github.com/vihao1802/dalle_clone/blob/main/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" target="_blank" />
   </a>
-  <a href="https://github.com/vihao1802/Website-ClassIn/watchers">
-    <img alt="GitHub" src="https://img.shields.io/github/watchers/vihao1802/Website-Classin" target="_blank" />
-  </a> -->
+  <a href="https://github.com/vihao1802/dalle_clone/watchers">
+    <img alt="GitHub" src="https://img.shields.io/github/watchers/vihao1802/dalle_clone" target="_blank" />
+  </a>
 </p>
 
 <p align="center">
