@@ -136,4 +136,4 @@ uvicorn main:app --reload
 ## 📝 License
 
 Copyright © 2024 [Tran Vi Hao](https://github.com/vihao1802).<br />
-This project is [MIT](https://github.com/vihao1802/Website-ClassIn/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/vihao1802/dalle_clone/blob/main/LICENSE) licensed.
