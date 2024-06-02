@@ -19,7 +19,7 @@
   <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/></a>&nbsp 
 </p>
 
-> `DALL_E Clone Website` that provides an minimal UI with generated AI tool.
+> `DALL_E Clone Website` that provides a minimal UI with generated AI tool.
 
 ![image](https://github.com/vihao1802/dalle_clone/assets/108573121/ca894ff0-1611-4f3b-8ef9-0d35434a6bfa)
 
@@ -41,8 +41,8 @@
 
 ### 💎 Prerequisites
 
-- <p><a href="https://nodejs.org/en">Nodejs></a></p>
-- <p><a href="https://www.npmjs.com/">npm></a>(normally comes with Node.js)</p>
+- <p><a href="https://nodejs.org/en">Nodejs</a></p>
+- <p><a href="https://www.npmjs.com/">npm</a> (normally comes with Node.js)</p>
 
 ### ⚙️ Installation
 
@@ -51,26 +51,25 @@
 ```sh
 git clone https://github.com/vihao1802/dalle_clone
 ```
+2. From `root` directory, move to `frontend`
 
-2. From `root` directory, move to `backend`
+```
+cd frontend
+```
+
+3. Install all required packages in `packages.json`
+
+```
+npm i
+```
+
+4. From `root` directory, move to `backend`
 
 ```
 cd backend
 ```
 
 5. Install all required packages in `packages.json`
-
-```
-npm i
-```
-
-6. From `root` directory, move to `frontend`
-
-```
-cd frontend
-```
-
-7. Install all required packages in `packages.json`
 
 ```
 npm i
@@ -133,8 +132,6 @@ uvicorn main:app --reload
 <a href="https://github.com/vihao1802/dalle_clone/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=vihao1802/dalle_clone" />
 </a>
-
-Made with [contrib.rocks](https://contrib.rocks).
 
 ## 📝 License
 
