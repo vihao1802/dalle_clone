@@ -77,7 +77,7 @@ npm i
 8. Create file `.env.local` in folder `frontend` with format:
 
 ```env
-
+VITE_API_URL=
 ```
 
 9. Create file `.env` in folder `backend` with format:
