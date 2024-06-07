@@ -28,9 +28,9 @@
 
 ## Render Deployment
 
-### Frontend: <a href="https://website-classin-hu7l.onrender.com/" target="_blank">https://website-classin-hu7l.onrender.com/</a>
+### client: <a href="https://website-classin-hu7l.onrender.com/" target="_blank">https://website-classin-hu7l.onrender.com/</a>
 
-### Backend: <a href="https://website-classin.onrender.com" target="_blank">https://website-classin.onrender.com</a>
+### server: <a href="https://website-classin.onrender.com" target="_blank">https://website-classin.onrender.com</a>
 -->
 
 <!-- GETTING STARTED -->
@@ -50,10 +50,10 @@
 git clone https://github.com/vihao1802/dalle_clone
 ```
 
-2. From `root` directory, move to `frontend`
+2. From `root` directory, move to `client`
 
 ```
-cd frontend
+cd client
 ```
 
 3. Install all required packages in `packages.json`
@@ -62,10 +62,10 @@ cd frontend
 npm i
 ```
 
-4. From `root` directory, move to `backend`
+4. From `root` directory, move to `server`
 
 ```
-cd backend
+cd server
 ```
 
 5. Install all required packages in `packages.json`
@@ -74,13 +74,13 @@ cd backend
 npm i
 ```
 
-8. Create file `.env.local` in folder `frontend` with format:
+8. Create file `.env.local` in folder `client` with format:
 
 ```env
 VITE_API_URL=
 ```
 
-9. Create file `.env` in folder `backend` with format:
+9. Create file `.env` in folder `server` with format:
 
 ```env
 OPENAI_API_KEY=
@@ -95,29 +95,29 @@ CLOUDINARY_API_SECRET=
 
 ⚠️ Use two terminals for running this web application
 
-### Frontend(First termnial):
+### Client(First termnial):
 
 - From `root` directory
 
 ```
-cd frontend
+cd client
 ```
 
-- Run `frontend`
+- Run `client`
 
 ```
 npm start
 ```
 
-### Backend(Second termnial):
+### Server(Second termnial):
 
 - From `root` directory
 
 ```
-cd backend
+cd server
 ```
 
-- Run `backend`
+- Run `server`
 
 ```
 uvicorn main:app --reload
