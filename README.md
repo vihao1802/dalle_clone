@@ -106,7 +106,7 @@ cd client
 - Run `client`
 
 ```
-npm start
+npm run dev
 ```
 
 ### Server(Second termnial):
@@ -120,7 +120,7 @@ cd server
 - Run `server`
 
 ```
-uvicorn main:app --reload
+npm run start
 ```
 
 ## ✨ Code Contributors
