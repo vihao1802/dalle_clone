@@ -28,15 +28,12 @@ const Home = () => {
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const response = await fetch(
-          "https://dalle-clone-wofd.onrender.com/api/v1/post",
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/post`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
 
         if (response.ok) {
           const result = await response.json();
@@ -95,7 +92,7 @@ const Home = () => {
         {loading ? (
           <div className="flex flex-col justify-center items-center">
             <Loader />
-            <h1 className="mt-2 ">
+            <h1 className="mt-2 dark:text-gray-50">
               It may take a little longer ( powered by Render's Free Plan )
             </h1>
           </div>
